@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario Local</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>📦 Sistema de Inventario</h1>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Agregar Producto</h2>
+            <form id="productForm">
+                <input type="text" id="nombre" placeholder="Nombre del producto" required>
+                <input type="number" id="cantidad" placeholder="Cantidad" required min="1">
+                <input type="number" id="precio" placeholder="Precio" required min="0" step="0.01">
+                <button type="submit">Agregar</button>
+            </form>
+        </section>
+
+        <section class="table-section">
+            <h2>Inventario Actual</h2>
+            <table id="inventarioTabla">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Total</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="inventarioBody"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Gestiona tu inventario </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
